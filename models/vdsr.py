@@ -37,7 +37,3 @@ class VDSR(nn.Module):
         out = self.output(out)
         out = torch.add(out,residual)
         return out
-model = VDSR()
-
-total_params = sum(p.numel() for p in model.parameters())
-print(f"Số lượng tham số của mô hình: {total_params}")
